@@ -24,13 +24,7 @@ export default function Main() {
     }
 
     function changeImage() {
-        // get a random number from 0 to array.length
-        // use that random number to get a random meme
-        // obj from the array.
-        // Set state
-
         const randomNumer = Math.floor(Math.random() * allMemes.length)
-        //Math.random() generates random decimal number between 0 and 1. Multiplying it with the length of the array scales it up to match the range, ex: if random number is 0.5 and length is 100 the result will be 50 coz of the Math.floor()
         const newMemeUrl = allMemes[randomNumer].url
         setMemeInfo(prevMemeInfo => ({
             ...prevMemeInfo,
