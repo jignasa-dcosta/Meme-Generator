@@ -1,0 +1,122 @@
+/* Apply border-box sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Set font and remove default margin on the body */
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+/* Center the main content and set padding + max width */
+main {
+  margin-inline: auto; /* centers main horizontally */
+  padding: 36px;
+  max-width: 600px; /* restricts width */
+}
+
+/* Header styles: flex container with gradient background and white text */
+.header {
+  display: flex;
+  align-items: center; /* vertically center items */
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  
+}
+
+/* Style the header's image */
+.header > img {
+  height: 100%; /* image takes full header height */
+  margin-right: 6px; /* space between image and text */
+  margin-left: 50px;
+  transform: scaleX(-1);
+}
+
+/* Style the header's main title */
+.header > h1 {
+  font-size: 1.25rem;
+  margin-right: auto; /* pushes other items (if any) to the right */
+}
+
+/* Form container using grid layout with 2 columns */
+.form {
+  display: grid;
+  grid-template: auto auto / 1fr 1fr; /* two rows and two equal columns */
+  gap: 17px; /* space between grid items */
+  margin-bottom: 17px;
+}
+
+/* Input fields inside the form */
+.form input {
+  width: 100%; /* full width of the grid cell */
+  margin-top: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px; /* small padding inside the input */
+}
+
+/* Button inside the form */
+.form button {
+  grid-column: 1 / -1; /* span the button across both columns */
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  border: none; /* remove default border */
+  cursor: pointer; /* cursor becomes a pointer on hover */
+}
+
+/* Common styles for input and button */
+.form input, .form button {
+  min-height: 40px; /* minimum height */
+  font-family: "Karla", sans-serif;
+}
+
+/* Meme container: center content, position relative for layering text */
+.meme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Meme image: responsive sizing and rounded corners */
+.meme > img {
+  max-width: 100%; /* no overflow */
+  height: auto; /* maintain aspect ratio */
+  border-radius: 3px;
+}
+
+/* Text over meme image */
+.meme span {
+  position: absolute; /* position text over image */
+  text-align: center;
+  margin-block: 15px;
+  padding-inline: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px; /* space between letters */
+  text-shadow: 
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      2px -2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000; /* thick black outline effect */
+}
+
+/* Class to push text to bottom of meme */
+.bottom {
+  bottom: 0;
+}
+
+/* Class to push text to top of meme */
+.top {
+  top: 0;
+}
